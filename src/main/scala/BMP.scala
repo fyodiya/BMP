@@ -9,7 +9,7 @@ import java.io.FileOutputStream
 object BMP extends App {
 
   // Text to be converted to an image
-  val text = "HELLO"
+  val text = "text to be converted"
 
   // Create an SVG for monochrome image
   val svgContent = s"""<svg xmlns="http://www.w3.org/2000/svg" width="64" height="16">
@@ -29,4 +29,5 @@ object BMP extends App {
   val bmpFile = new FileOutputStream("monochrome_image.bmp")
   bmpFile.write(outputStream.toByteArray)
   bmpFile.close()
+
 }
